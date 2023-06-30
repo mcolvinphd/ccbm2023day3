@@ -17,11 +17,8 @@ for day in range(20):
     S+=delta_S
     I+=delta_I
     R+=delta_R
+    # Ensure S,I,R > 0
     S=max(S,0)
     I=max(I,0)
     R=max(R,0)
 #Plot S,I,R vs day
-plt.plot(S_hist)
-plt.plot(I_hist,color='red')
-plt.plot(R_hist,color='green')
-plt.show()
